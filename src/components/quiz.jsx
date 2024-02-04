@@ -28,7 +28,7 @@ function Quiz(props) {
       if ((inputValue == '') && (liActive.length == 0)) {
         setHintIn("err")
       } else if(((inputValue != '') || (liActive.length != 0))) {
-        if (props.question.answers[liActive.at(-1)].pointer == '4A') {
+        if (props.question.answers[liActive.at(-1)].pointer == '3') {
           setFlag(1)
         }
         setHintIn("hintIn")

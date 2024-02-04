@@ -57,6 +57,7 @@ const postRequest = async () => {
 }
 
   return (
+  <div className="app_container">
     <div className="app">
       <div className="app_inner">
          <div className="itmo_logo">
@@ -90,6 +91,7 @@ const postRequest = async () => {
         </section>
       </div>
     </div>
+  </div>
   );
  
 }
