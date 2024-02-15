@@ -34,14 +34,21 @@ function Quiz(props) {
         setHintIn("hintIn")
         setInputValue([])
         setLiActive('')
+        if (props.question.answers[liActive.at(-1)].pointer == "17B") {
+          props.setId(props.question.answers[liActive.at(-1)].pointer)
+          setFlag(0)
+        } else {
+
+        
         if (flag == 1 && props.question.answers[liActive.at(-1)].pointer == "22") {
+
           props.setId('18')
           setFlag(0)
         } else {
           props.setId(props.question.answers[liActive.at(-1)].pointer)
         }
         
-       
+      }
       }
     }   
 
@@ -236,6 +243,7 @@ function Quiz(props) {
                                                     <button className='quiz_btn_el' onClick={() => {
                                                       setLiActive([0])
                                                       props.setId(props.question.answers[0].pointer)
+                                                      
                                                       props.postRequest()
                                                       }}>Вперед</button>
                                                 </div>
